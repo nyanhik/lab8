@@ -1,0 +1,16 @@
+
+
+
+services:
+
+  db:
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    image: postgers-db
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: 1q2w3e4r5t
+      POSTGRES_USER: yan
+      POSTGRES_DB: krya

@@ -1,0 +1,10 @@
+FROM postgres:latest
+
+WORKDIR /
+
+ENV POSTGRES_PASSWORD 1q2w3e4r5t
+ENV POSTGRES_USER yan
+
+RUN mkdir -p /docker-entrypoint-initdb.d
+
+COPY init/* /docker-entrypoint-initdb.d/
