@@ -3,9 +3,9 @@
 
 services:
 
-  db:
+  lab:
     build:
-      context: ./db
+      context: ./lab
       dockerfile: Dockerfile
     image: postgers-db
     ports:
@@ -14,3 +14,8 @@ services:
       POSTGRES_PASSWORD: 1q2w3e4r5t
       POSTGRES_USER: yan
       POSTGRES_DB: krya
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+    - 8080:8080
